@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "total": 3,
+    "image": "song_1.jpg",
+    "audio": "song_1.mp3",
+    "song": "丑八怪",
+    "album": "意外",
+    "singer": "薛之谦",
+    "duration": 253,
+    "isLike": true
+  },
+  {
+    "id": 2,
+    "total": 3,
+    "image": "song_2.jpg",
+    "audio": "song_2.mp3",
+    "song": "伞下铭",
+    "album": "伞下铭",
+    "singer": "封茗囧菌",
+    "duration": 258,
+    "isLike": true
+  },
+  {
+    "id": 3,
+    "total": 3,
+    "image": "song_3.jpg",
+    "audio": "song_3.mp3",
+    "song": "Shape of You",
+    "album": "÷",
+    "singer": "ed sheeran",
+    "duration": 235,
+    "isLike": true
+  }
+]
