@@ -1,5 +1,3 @@
-import $ from 'zepto-webpack'
-
 function gaussBlur(imgData) {
     var pixes = imgData.data;
     var width = imgData.width;

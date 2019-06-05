@@ -7,7 +7,7 @@ export default {
                 type: 'get',
                 dataType: 'jsonp',
                 data: {
-                    page: page || 0
+                    page: page
                 },
                 url: 'http://localhost:8080/' + url,
                 success: function (data) {

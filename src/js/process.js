@@ -1,11 +1,12 @@
 import {renderEndTime} from './formatTime'
 
-let timer = null, curDuration = 0, lastPercent = 0, startTime = 0;
+let timer = null, curDuration = 0, lastPercent = 0, startTime = 0, dura;
 
 function start(duration, per, cut) {
     lastPercent = cut === true ? 0 : per === 0 ? lastPercent : per;
     cancelAnimationFrame(timer);
     startTime = new Date().getTime();
+    dura = duration;
     curDuration = duration;
 
     function frame() {
@@ -21,6 +22,13 @@ function start(duration, per, cut) {
 
 function update(percent) {
     let curTime = percent * curDuration;
+    if (Math.floor(curTime) === dura) {
+        console.log(curTime);
+        curTime = dura;
+        cancelAnimationFrame(timer);
+        $('.next-btn').trigger('click');
+        return;
+    }
     renderEndTime(curTime, '.start-time');
     changePro(percent);
 }
