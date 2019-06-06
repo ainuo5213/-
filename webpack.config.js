@@ -38,6 +38,16 @@ var config = {
                 loader: 'html-withimg-loader'
             },
             {
+                test: /\.json$/,
+                loader: 'json-loader',
+                exclude: /node_modules/, //排出node_modules里面的js文件
+            },
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/, //排出node_modules里面的js文件
+            },
+            {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/, //排出node_modules里面的js文件
@@ -74,6 +84,7 @@ var config = {
                 test: /\.(png|jpg|gif|woff|woff2|svg|eot|ttf)$/,
                 use: ['url-loader?limit=8192&name=assets/[name].[ext]']
             },
+
             {
                 test: /\.mp3$/,
                 use: ['file-loader?limit=8192&name=assets/[name].[ext]']
