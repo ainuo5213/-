@@ -6,7 +6,7 @@ import Audio from './js/audioControl'
 import {start, stop, update} from './js/process'
 import guss from './js/gaussBlur'
 import $ from "zepto-webpack";
-import './mock/data.json'
+
 
 const main = {
     audio: new Audio.AudioControl(),
