@@ -5,7 +5,6 @@ import control from './js/control'
 import Audio from './js/audioControl'
 import {start, stop, update} from './js/process'
 import guss from './js/gaussBlur'
-import $ from "zepto-webpack";
 
 
 const main = {
