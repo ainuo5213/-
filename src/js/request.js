@@ -1,4 +1,4 @@
-import $ from 'zepto-webpack'
+
 
 export default {
     getJson: function (url, page) {
