@@ -1,4 +1,3 @@
-import $ from 'zepto-webpack'
 import guss from './gaussBlur'
 import {renderEndTime} from './formatTime'
 
