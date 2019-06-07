@@ -5,7 +5,8 @@ import control from './js/control'
 import Audio from './js/audioControl'
 import {start, stop, update} from './js/process'
 import guss from './js/gaussBlur'
-
+import $ from "zepto-webpack";
+import Lyric from "./js/lyrics";
 
 const main = {
     audio: new Audio.AudioControl(),
@@ -141,6 +142,7 @@ const main = {
         if (this.params.count === 1) { //控制点击
             if (!audio.src) {
                 audio.getAudio(cache[index].audio);
+                new Lyric().getLyrics(cache[index].lyrics, audio)
             }
             this.params.count = 2;
         }
@@ -165,7 +167,7 @@ const main = {
         if (add === 'add') {
             playSong.addClass('pause');
             playBtn.addClass('pause');
-            if (playSong[0].classList.contains('stopped')){
+            if (playSong[0].classList.contains('stopped')) {
                 playSong.removeClass('stopped');
             }
         } else if (add === 'remove') {

@@ -1,5 +1,4 @@
 
-
 export default {
     getJson: function (url, page) {
         return new Promise((resolve, reject) => {
@@ -7,7 +6,7 @@ export default {
                 type: 'get',
                 dataType: 'jsonp',
                 data: {
-                    page: page
+                    page: page,
                 },
                 url: 'http://localhost:8080/' + url,
                 success: function (data) {
@@ -18,5 +17,5 @@ export default {
                 }
             })
         })
-    }
+    },
 }

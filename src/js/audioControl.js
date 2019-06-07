@@ -1,8 +1,9 @@
+import Lyric from "./lyrics";
+
 export default {
     AudioControl: function () {
         this.audio = new Audio();
         this.status = 'pause';
-        this.src = this.audio.src;
         this.play = function () {
             this.audio.play();
             this.status = 'play';
@@ -17,6 +18,9 @@ export default {
         this.playTo = function(time){
             this.audio.currentTime = time;
             this.play();
+        };
+        this.setlyric = function (lyric) {
+            this.lyric = Lyric;
         }
     },
 }

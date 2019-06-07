@@ -63,6 +63,27 @@ body {
     }
   }
 
+  .song-lyric {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+
+    .song-lyric-info {
+      width: 100%;
+      transform: translate3d(0, 30px, 0);
+      transition: all .2s;
+
+      p {
+        display: block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
+
   .song-process {
     display: flex;
 

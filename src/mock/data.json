@@ -7,8 +7,9 @@
     "song": "丑八怪",
     "album": "意外",
     "singer": "薛之谦",
+    "lyrics": "song_1.lrc",
     "duration": 253,
-    "isLike": true
+    "isLike": false
   },
   {
     "id": 2,
@@ -18,6 +19,7 @@
     "song": "伞下铭",
     "album": "伞下铭",
     "singer": "封茗囧菌",
+    "lyrics": "song_2.lrc",
     "duration": 258,
     "isLike": true
   },
@@ -26,10 +28,11 @@
     "total": 3,
     "image": "song_3.jpg",
     "audio": "song_3.mp3",
-    "song": "Shape of You",
-    "album": "÷",
-    "singer": "ed sheeran",
-    "duration": 235,
-    "isLike": true
+    "song": "一首想不通的古风",
+    "album": "一首想不通的古风",
+    "singer": "玄觞/贰婶",
+    "lyrics": "song_3.lrc",
+    "duration": 246,
+    "isLike": false
   }
 ]
