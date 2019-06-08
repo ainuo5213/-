@@ -1,12 +1,12 @@
-import './css/index.less'
+﻿import './css/index.less'
 import api from './js/request'
 import {render, renderSongList} from './js/render'
 import control from './js/control'
 import Audio from './js/audioControl'
 import {start, stop, update} from './js/process'
 import guss from './js/gaussBlur'
-import $ from "zepto-webpack";
-import Lyric from "./js/lyrics";
+
+
 
 const main = {
     audio: new Audio.AudioControl(),
@@ -53,16 +53,10 @@ const main = {
         } else if (audio.status === "pause") {//暂停状态，播放
             if (that.classList.contains('stopped')) {//暂停之后继续播放
                 $('.play-btn').trigger('click');
-                $(that).removeClass('stopped');
-                $('.play-song').removeClass('pause');
-                $(that).addClass('pause');
             } else {//暂停之后，切歌
                 this.params.perc = 0;
-                audio.playTo(0);
-                $('.play-song').removeClass('pause');//去掉所有歌曲的pause
+                $('.play-btn').trigger('click');
                 $('.play-song.stopped').removeClass('stopped');
-                $(that).addClass('pause');
-                $('.play-btn').addClass('pause');
                 start(this.params.duration, 0, true)
             }
         } else if (audio.status === "play") {//播放状态，暂停
@@ -142,7 +136,7 @@ const main = {
         if (this.params.count === 1) { //控制点击
             if (!audio.src) {
                 audio.getAudio(cache[index].audio);
-                new Lyric().getLyrics(cache[index].lyrics, audio)
+                //new Lyric().getLyrics(cache[index].lyrics, audio)
             }
             this.params.count = 2;
         }
