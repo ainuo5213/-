@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "total": 3,
+    "image": "song_1.jpg",
+    "audio": "song_1.mp3",
+    "song": "丑八怪",
+    "album": "意外",
+    "singer": "薛之谦",
+    "lyrics": "song_1.lrc",
+    "duration": 253,
+    "isLike": false
+  },
+  {
+    "id": 2,
+    "total": 3,
+    "image": "song_2.jpg",
+    "audio": "song_2.mp3",
+    "song": "伞下铭",
+    "album": "伞下铭",
+    "singer": "封茗囧菌",
+    "lyrics": "song_2.lrc",
+    "duration": 258,
+    "isLike": true
+  },
+  {
+    "id": 3,
+    "total": 3,
+    "image": "song_3.jpg",
+    "audio": "song_3.mp3",
+    "song": "一首想不通的古风",
+    "album": "一首想不通的古风",
+    "singer": "玄觞/贰婶",
+    "lyrics": "song_3.lrc",
+    "duration": 246,
+    "isLike": false
+  }
+]
