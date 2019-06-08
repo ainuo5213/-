@@ -7,7 +7,6 @@ import {start, stop, update} from './js/process'
 import guss from './js/gaussBlur'
 
 
-
 const main = {
     audio: new Audio.AudioControl(),
     params: {
@@ -94,7 +93,7 @@ const main = {
             let percent = (x - left) / width;
             if (percent < 0) {
                 percent = 0;
-            } else if (percent > 1) {
+            } else if (percent >= 1) {
                 percent = 1;
             }
             update(percent)
@@ -106,8 +105,9 @@ const main = {
             let percent = (x - left) / width;
             if (percent < 0) {
                 percent = 0;
-            } else if (percent > 1) {
-                percent = 1;
+            } else if (percent >= 1) {
+                $('.next-btn').trigger('click');
+                return;
             }
             self.params.perc = percent;
             self.params.curTime = Math.round(percent * duration);
